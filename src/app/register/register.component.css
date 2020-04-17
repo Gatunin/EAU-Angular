@@ -1,0 +1,59 @@
+:host{
+    display: block;
+    background-color: burlywood;
+    border-style: ridge;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    padding: 1em;
+    width: 400px;
+    margin-left: 1em;
+}
+
+button{
+    grid-area: boton;
+    font-family: inherit;    
+}
+
+input{
+font-family: inherit;
+}
+
+.container{
+    display: grid;
+    grid-template-areas:
+     "user inputUser ."
+     "pass inputPass ."
+     "email inputEmail ."
+     " . . boton";    
+     align-items: center;
+}
+
+
+.user{
+    grid-area: user;
+}
+
+.pass{
+    grid-area: pass;
+}
+
+.email{
+    grid-area: email;
+}
+
+.inputUser{
+    grid-area: inputUser;
+}
+
+.inputPass{
+    grid-area: inputPass;
+}
+
+.inputEmail{
+    grid-area: inputEmail;
+}
+
+.boton{
+    grid-area: boton;
+}
+                    

@@ -10,16 +10,17 @@ export class TitleComponent implements OnInit {
     public name: string;
     public password: string;
     public mostrarInfo: boolean = false;
+    public rols: string[];
 
     constructor() { }
 
     ngOnInit() {
-        this.name = 'Gao';
-        this.password = '1543';
-        
-        setTimeout(() => {
-            this.mostrarInfo = true;
-        }, 3000);
+        this.name = 'Gato';
+        this.password = '1543byo';
+        this.rols = [
+            'Master',
+            'Jugador'
+        ]
     }
 
     existUser() : boolean {
@@ -27,5 +28,9 @@ export class TitleComponent implements OnInit {
             return false;
         else
             return true;
+    }
+
+    mostrarInformacion() {
+        this.mostrarInfo = !this.mostrarInfo
     }
 }

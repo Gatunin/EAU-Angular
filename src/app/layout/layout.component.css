@@ -4,5 +4,12 @@
     min-width: 100vw;
     align-items: center;
     justify-content: center;
-    background-color: silver;
+    background-color: tan;
+}
+
+@media(min-width:960px){
+    .layout{
+        background-image: url(../../assets/Images/mapaTierraMedia.jpg);
+        background-size: cover;
+    }
 }

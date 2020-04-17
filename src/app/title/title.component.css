@@ -1,6 +1,7 @@
 :host{
     display: block;
-    background-color: white;
+    background-color: burlywood;
+    border-style: ridge;
     border-radius: 8px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
     padding: 1em;
@@ -12,6 +13,7 @@ button{
     outline: none;
     padding: 1em;
     font-size: 1em;
+    font-family: inherit;
 }
 
 a{
@@ -19,6 +21,59 @@ a{
     margin: 1em;
     cursor: pointer;
     text-decoration: underline;
+}
+
+p{
+    font-size: 10px;
+    font-weight: lighter;
+}
+
+.container{
+    display: grid;
+    grid-template-areas:
+     "user inputUser ."
+     "pass inputPass ."
+     "showinfo . ."
+     "info info info"
+     "btnEntrar . btnRegistrarse"
+     ". txtSaludo .";    
+     align-items: center;   
+}
+
+.user{
+    grid-area: user;
+}
+
+.inputUser{
+    grid-area: inputUser;
+}
+
+.pass{
+    grid-area: pass;
+}
+
+.inputPass{
+    grid-area: inputPass;
+}
+
+.showinfo{
+    grid-area: showinfo;
+}
+
+.info{
+    grid-area: info;
+}
+
+.btnEntrar{
+    grid-area: btnEntrar;
+}
+
+.btnRegistrarse{
+    grid-area: btnRegistrarse;
+}
+
+.txtSaludo{
+    grid-area: txtSaludo;
 }
 
 .active{

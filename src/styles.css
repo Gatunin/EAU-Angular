@@ -1,4 +1,9 @@
+@font-face{
+    font-family: 'Aniron';
+    src: url(./assets/fonts/anirb___.ttf);
+}
+
 body{
     margin: 0px;
-    font-family: fantasy;
+    font-family: Aniron;
 }

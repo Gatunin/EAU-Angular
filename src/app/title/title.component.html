@@ -1,14 +1,19 @@
-<h1>Inicia Sesion</h1>
-<h3>Usuario : {{name}}</h3>
-<h3>Password : {{password}}</h3>
-<a>Más información <i class="fa " [ngClass]="{'fa-chevron-circle-down': !mostrarInfo,'fa-chevron-circle-up': mostrarInfo}"></i></a>
-<p *ngIf="mostrarInfo">El usuario no es el nombre del personaje de ninguna partida, sino el nombre con el que te registraste.</p>
-<div>
-    <button [ngClass]="{active: existUser()}" type="button" name="button">Entrar</button>
+<div class="container">
+    <h3 class="user">Usuario</h3>
+    <input class="inputUser" type="text" (change) = "changing($event)">
+    <h3 class="pass">Contraseña</h3>
+    <input class="inputPass" type="text" (change) = "changing($event)">
+    
+    <a class ="showinfo" (click)="mostrarInformacion()">Más información <i class="fa "
+            [ngClass]="{'fa-chevron-circle-down': !mostrarInfo,'fa-chevron-circle-up': mostrarInfo}"></i></a>
+    
+    <p class="info" *ngIf="mostrarInfo">El usuario no es el nombre del personaje de ninguna partida, sino el nombre con el que te
+        registraste.</p>
+    
+        <button  class = "btnEntrar" [ngClass]="{active: existUser()}" type="button" name="button">Entrar</button>
+    <button  class= 'btnRegistrarse' *ngIf="!existUser(); else registered" [ngClass]="{active : !existUser()}" type="button"
+        name="button">Registrarse</button>
+    <ng-template #registered>
+        <span class="txtSaludo">Bienvenido {{name}}</span>
+    </ng-template>  
 </div>
-
-<button *ngIf="!existUser(); else registered" [ngClass]="{active : !existUser()}" type="button" name="button">Registrarse</button>
-<ng-template #registered> 
-    <span class="shadow">Bienvenido {{name}}</span>
-</ng-template>
-

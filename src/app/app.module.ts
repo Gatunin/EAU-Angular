@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { TitleComponent } from './title/title.component';
 import { LayoutComponent } from './layout/layout.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TitleComponent,
-    LayoutComponent
+    LayoutComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule
