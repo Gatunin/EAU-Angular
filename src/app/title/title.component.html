@@ -1,0 +1,14 @@
+<h1>Inicia Sesion</h1>
+<h3>Usuario : {{name}}</h3>
+<h3>Password : {{password}}</h3>
+<a>Más información <i class="fa " [ngClass]="{'fa-chevron-circle-down': !mostrarInfo,'fa-chevron-circle-up': mostrarInfo}"></i></a>
+<p *ngIf="mostrarInfo">El usuario no es el nombre del personaje de ninguna partida, sino el nombre con el que te registraste.</p>
+<div>
+    <button [ngClass]="{active: existUser()}" type="button" name="button">Entrar</button>
+</div>
+
+<button *ngIf="!existUser(); else registered" [ngClass]="{active : !existUser()}" type="button" name="button">Registrarse</button>
+<ng-template #registered> 
+    <span class="shadow">Bienvenido {{name}}</span>
+</ng-template>
+

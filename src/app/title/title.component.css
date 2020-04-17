@@ -1,0 +1,35 @@
+:host{
+    display: block;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+    padding: 1em;
+    width: 400px;
+}
+
+button{
+    border: 0;
+    outline: none;
+    padding: 1em;
+    font-size: 1em;
+}
+
+a{
+    display: inline-block;
+    margin: 1em;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.active{
+background-color: skyblue;
+}
+
+button:not(.active)
+{
+    opacity: 0.56;
+}
+
+.shadow{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
